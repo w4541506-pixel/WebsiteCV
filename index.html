@@ -27,30 +27,57 @@ const SITE = {
   location: "Christchurch, New Zealand",
   links: [
     { label: "will.teataotu@outlook.co.nz", href: "mailto:will.teataotu@outlook.co.nz" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/will-macdonald-016420419" }   // put your real GitHub here                // drop your CV next to this file as cv.pdf
+    { label: "LinkedIn", href: "https://linkedin.com/in/will-macdonald-016420419" },
+    // delete this line if you don't upload cv.pdf
   ],
   skills: [
-    "Fabrication, lathing, milling, CAD and G-code."
+    "Fabrication", "Lathe", "Mill", "CAD", "G-code", "KiCad"
   ]
 };
 
 const PROJECTS = [
   {
-    title: "Line following robot PCB Design",
+    title: "Line following robot PCB and mechanical design",
     year: "2026",
-    context: "ENMT221 · University of Canterbury",   // course, club, personal, work
-    role: "Solo",                                     // Solo / Pair / Team of 4 (my part: firmware)
-    summary: "Tasked with creating a PCB design with capability for a line following robot, alongside a motion transmission system",
+    context: "ENMT221 · University of Canterbury",
+    role: "Solo",
+    summary: "Controller PCB and drivetrain for a line-following robot, designed from a set of requirements.",
     details: [
-      "Designed an ATmega328-based controller PCB (KiCad, DRC-clean, fabrication-ready) and a 15:1 two-stage spur gearbox for a line-following robot, including motor performance analysis showing the design was traction-limited rather than torque-limited."
+      "ATmega328-based controller PCB in KiCad — DRC-clean and fabrication-ready.",
+      "15:1 two-stage spur gearbox designed from motor performance analysis.",
+      "Analysis showed the drivetrain was traction-limited rather than torque-limited, which set the final gear ratio."
     ],
-    tags: ["Kicad", "CAD"],
+    tags: ["KiCad", "PCB design", "CAD", "Gear design"],
     media: [
-      { type: "image", src: "media/example/photo1.jpg", caption: "Front view of the finished build" },
-      { type: "image", src: "media/example/photo2.jpg", caption: "Inside the enclosure" },
-      { type: "video", src: "media/example/demo.mp4" },
-      { type: "youtube", id: "" }   // paste a YouTube id, or delete this line
-    ],  
+      { type: "image", src: "media/lfr/3DPCB.jpg", caption: "Controller PCB 3D view" },
+      { type: "image", src: "media/lfr/PCB.jpg", caption: "Controller PCB design" },
+      { type: "image", src: "media/lfr/gearbox.jpg", caption: "Two-stage spur gearbox" }
+    ]
+  },
+
+  {
+    title: "Tap wrench and hammer fabrication",
+    year: "2026",
+    context: "ENME199 · University of Canterbury",
+    role: "Solo",
+    summary: "Machined a tap wrench and a hammer from engineering drawings on a manual lathe and mill.",
+    tags: ["Machining", "Fabrication"],
+    media: [
+      { type: "image", src: "media/Tapwrench.jpg", caption: "Tap wrench" },
+      { type: "image", src: "media/hammer.jpg", caption: "Hammer" }
+    ]
+  },
+
+  {
+    title: "Coaster design and G-code generation",
+    year: "2026",
+    context: "ENMT221 · University of Canterbury",
+    role: "Solo",
+    summary: "Designed a coaster to be machined out of 3d-printing recycled waste",
+    tags: ["Fabrication"],
+    media: [
+      { type: "image", src: "media/coaster.jpg", caption: "Final coaster product" },
+    ]
   }
 ];
 </script>
@@ -95,7 +122,7 @@ header{border-bottom:2px solid var(--ink);padding:36px 0 28px}
 .projects-head h2{font-size:15px;font-weight:600;color:var(--ink-2)}
 .projects-head small{font-size:13px;color:var(--ink-2)}
 
-.project{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);padding:44px 0;border-bottom:1px solid var(--rule)}
+.project{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,56px);padding:44px 0;border-bottom:1px solid var(--rule)}
 .project:last-child{border-bottom:none}
 .p-meta{font-size:14px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:4px 14px}
 .p-meta span+span::before{content:"/";margin-right:14px;color:var(--rule)}
