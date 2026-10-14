@@ -36,21 +36,23 @@ const SITE = {
 };
 
 const PROJECTS = [
-  {
-    title: "Line following robot PCB and mechanical design",
+    {
+    title: "Line following robot: PCB, drivetrain and chassis",
     year: "2026",
     context: "ENMT221 · University of Canterbury",
-    role: "Solo",
-    summary: "Controller PCB and drivetrain for a line-following robot, designed from a set of requirements.",
+    role: "Team · mechanical and chassis design",
+    summary: "Team-built line-following robot designed to a set of requirements. I did the mechanical system and chassis, plus the controller PCB.",
     details: [
-      "ATmega328-based controller PCB in KiCad — DRC-clean and fabrication-ready.",
-      "15:1 two-stage spur gearbox designed from motor performance analysis.",
-      "Analysis showed the drivetrain was traction-limited rather than torque-limited, which set the final gear ratio."
+      "Designed the mechanical system and chassis; laser-cut and 3D-printed the parts.",
+      "ATmega328-based controller PCB in KiCad, DRC-clean and fabrication-ready.",
+      "15:1 two-stage spur gearbox designed from motor performance analysis, which showed traction set the drivetrain's limit.",
+      "Inertia in the geared drivetrain caused problems in testing, so we switched to a friction-wheel drive.",
+      "Redesigned and rebuilt the chassis the day before the assessed demo, scoring 8th out of 25 teams."
     ],
-    tags: ["KiCad", "PCB design", "CAD", "Gear design"],
+    tags: ["KiCad", "PCB design", "CAD", "Gear design", "Chassis design", "Laser cutting", "3D printing"],
     media: [
       { type: "image", src: "media/lfr/3DPCB.jpg", caption: "Controller PCB 3D view" },
-      { type: "image", src: "media/lfr/PCB.jpg", caption: "Controller PCB design" },
+      { type: "image", src: "media/lfr/FINALROBOT.jpg", caption: "Controller PCB design" },
       { type: "image", src: "media/lfr/gearbox.jpg", caption: "Two-stage spur gearbox" }
     ]
   },
